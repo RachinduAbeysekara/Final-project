@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <script>
+    function signIn() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "" || password === "") {
+        alert("Please enter username and password.");
+      } else{
+
+        if (username === "admin" && password === "admin") {
+            window.location.href = "/src/home.html";
+        } else {
+          alert("Invalid username or password. Please try again.");
+        }
+      }
+      
+    }
+    function register(){
+      window.location.href = "/src/register.html";
+    }
+
+  </script>
+</head>
+<body>
+  <h1>Sign In</h1>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="button" value="Sign In" onclick="signIn()">
+    <p id="newAcc" onclick="register()">Create new account</p>
+  </form>
+</body>
+</html>

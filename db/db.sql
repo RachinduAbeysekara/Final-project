@@ -1,0 +1,1 @@
+CREATE DATABASE lung_cancer;
